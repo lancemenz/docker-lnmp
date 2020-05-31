@@ -3,7 +3,7 @@ nginx:
   image: nginx:latest
   ports:
     - "8880:8880"
-    - "8443:8443"
+    # - "8443:8443"
   volumes:
     # app
     - ./app/src:/usr/share/nginx/html
@@ -45,4 +45,4 @@ mysql:
     # NOTE: your data will be stored in ./mysql
     - ./mysql:/var/lib/mysql
   environment:
-    - MYSQL_ROOT_PASSWORD=aA123456
+    - MYSQL_ROOT_PASSWORD=your_mysql_password
